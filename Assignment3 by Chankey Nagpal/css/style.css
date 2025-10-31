@@ -1,0 +1,65 @@
+body {
+  padding: 32px;
+  background: #f8f8f8;
+  font-family: Arial, sans-serif;
+}
+
+#costliest-price {
+  color: #252525;
+  font-size: 20px;
+  margin-bottom: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#product-list {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(34, 34, 34, 0.1333333333);
+  padding: 24px 28px;
+  border-radius: 7px;
+  text-align: center;
+  width: 200px;
+  border: 2px solid transparent;
+  transition: border 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.card:hover {
+  border: 2px solid #ffe066;
+  box-shadow: 0 4px 20px rgba(34, 34, 34, 0.1333333333);
+  background: #ffe066;
+}
+
+.card-title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #30344d;
+}
+
+.card-category {
+  font-size: 14px;
+  color: #a3a4b2;
+  margin-bottom: 12px;
+}
+
+.card-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a6d1a;
+}
+
+.card-discount {
+  font-size: 15px;
+  color: #b04728;
+  margin-top: 6px;
+}
+
+/*# sourceMappingURL=style.css.map */
