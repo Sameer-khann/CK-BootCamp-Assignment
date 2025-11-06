@@ -1,0 +1,92 @@
+Task 1 : Find and terminate the top memory-consuming process on your system.
+
+top
+{press -> shift + M} (sort processes in decending order)
+sudo kill (ProcessID)
+
+
+Task 2 : Create a user named devops and grant them sudo privileges.
+
+sudo adduser devops (add user)
+sudo usermod -aG sudo devops (add to sudo grp)
+groups devops (verify grp)
+su - devops (switch to it)
+sudo whoami (if get root means task done)
+
+
+Task 3 : Connect to a remote server, create a directory, and copy files into it using SCP.
+
+ssh-keygen -t rsa -b 4096 -C "linux Assignmnet key"
+ssh-copy-id prateek-srivastava@10.1.209.255
+mkdir -p /home/prateek-srivastava/samirremote/linuxassign
+ls  /home/prateek-srivastava/samirremote/
+scp task7.txt prateek-srivastava@10.1.209.255:/home/prateek-srivastava/samirremote/linuxassign (From Samir)
+
+
+
+Task 4 : List all active processes and save only those containing the word java into a file.
+
+ps aux | grep java > linux_assign_q4.txt
+
+
+Task 5 : Generate an SSH key pair and configure it for two different remote servers.
+
+ssh-copy-id siddhatth-singh@10.1.210.182
+
+
+Task 6 : Find all lines containing “error” in /var/log/syslog and redirect them to errors_found.txt
+
+grep "error" /var/log/syslog > task6_err.txt
+
+
+Task 7 : Find all .conf files in /etc, sort them alphabetically, and save to conf_list.txt.
+
+find /etc -type f -name "*.conf" | sort > task7.txt
+
+
+Task 8 : Display the total number of unique shell types listed in /etc/passwd and save to shell_count.txt
+
+awk -F: "{print $7}" /etc/passwd | sort | uniq | wc -l > task8.txt
+
+
+Task 9 : Explore vi/vim for
+Creating a text file. Understand cursor movement, switching input mode (append, insert etc),
+deleting command, pasting content, undo , redo ,search , save and quit operations in vim.
+
+vim task9.txt
+for cursor movement -> h, j, k, l, 0, $
+switching input mode -> i, a, o, esc
+deleting command -> d, d$, dd
+pasting content -> p, P(before), yy
+undo , redo : u, ctrl + r
+search , save -> /, :w
+quit operations in vim : :q, :wq, ZZ, :q!(quit without saving)
+
+
+
+Task 10 : Reset the current user password and reboot the system form shell.
+
+whoami
+passwd
+
+
+Task 11 : Zip the content of your home directory via tar and send it via scp to other person laptop. Unzip the content on other
+person laptop via tar.
+
+cd home/samir-khan/Downloads/
+mkdir scp_zip_practice
+cd scp_zip_practice/
+touch abc.txt
+cd ..
+tar -cvf samir.tar scp_zip_practice/
+ls
+scp prateek-srivastava@10.1.209.255
+scp samir.tar prateek-srivastava@10.1.209.255:/home/prateek-srivastava/Documents/
+
+
+tar -xvf my_project.tar
+ls
+
+
+
+Task 12 : Install and setup application via apt - mysql, postman, docker, dbeaver

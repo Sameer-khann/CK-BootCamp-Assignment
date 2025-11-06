@@ -1,15 +1,17 @@
-// Constructor function
 function Product(name, price, category) {
     this.name = name;
     this.price = price;
     this.category = category;
+
+    this.greet = function() {
+        console.log(this)
+    }
 }
 
 Product.prototype.getDiscountedPrice = function (percent) {
     return this.price - (this.price * percent / 100);
 };
 
-// IIFE
 var products;
 
 (function () {
@@ -20,11 +22,13 @@ var products;
         new Product('Turbo Racing Toy Car', 1999, 'Toy')
     ];
 
-    var priceList = products.map(function (p) { return p.price; });
+    // var priceList = products.map(function (p) { return p.price; });
+
+    var priceList = products.map(produc => produc.price)
 
     function findMax() {
         var max = -Infinity;
-        for (var i = 0; i < arguments.length; i++) {
+        for (var i = 0; i < arguments?.length; i++) {
             if (arguments[i] > max) {
                 max = arguments[i];
             }
@@ -65,7 +69,7 @@ var products;
         var discount = document.createElement('div');
         discount.className = "card-discount";
         var discountValue = product.getDiscountedPrice(10);
-        discount.textContent = "10% Off: ₹" + discountValue.toFixed(2);
+        discount.textContent = "10% Off: ₹" + discountValue?.toFixed(2);
         card.appendChild(discount);
 
         card.addEventListener('mouseenter', function () {

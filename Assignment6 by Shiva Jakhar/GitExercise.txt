@@ -1,0 +1,75 @@
+1. Configure SSH key in github account.
+
+ssh-keygen -t ed25519 -C "sameerkhann241@gmail.com"
+eval "$(ssh-agent -s)" (Start SSH agent)
+ssh-add ~/.ssh/id_ed25519 (addd  the key)
+cat ~/.ssh/id_ed25519.pub (copy key)
+(Do the github thing)
+ssh -T git@github.com (Test, should dipley "Hi Samir")
+
+
+2. Create a repository on github account.
+
+git init
+git add .
+git commit -m "New Project added"
+git branch -M main
+git remote add origin https://github.com/Sameer-khann/CK-BootCamp-Assignment.git
+git push origin main
+
+3. Clone the above repository on your local from github.
+
+git clone https://github.com/Sameer-khann/CK-BootCamp-Assignment.git
+
+4. Create a new file, say test.txt, in main branch. Make some changes to this file and commit the changes.
+
+git add .
+git commit -m "Stable"
+git push
+
+5. Create two branches from main branch
+
+git checkout main
+git checkout -b newBranch1
+
+git checkout main
+git checkout -b newBranch2
+
+git branch newBranchName
+
+6. 
+
+7. 
+
+8. Difference between git init and git clone.
+
+git init use to initialize a new empty repository.
+git clone used to clone an existing repo and override if anything earlier present in file.
+
+9. Difference between git branch and git checkout.
+
+git branch is use to see all the branches, or create a new branch.
+git branch newBranchName
+
+git checkout is used to switch the branch within our system, it is also used to create a branch and immediatly switch on it.
+
+10. Difference between git fetch and git pull.
+
+git fetch just bring the latest changes on remote branch but it doesn't merge it into our existing code, giving us vhance to compare what's coming from remote.
+
+git pull is the combination of git fetch + git merge. It fetches the branch from remote and merge it too. And give us conflict (if any).
+
+11. 
+
+12. Show the difference between git reset and git revert.
+
+git reset point the HEAD to the desired commit, but remives the intermediate commit.
+
+While git revert do the same but also keep the track of all the commit(Don't loose any commit)
+
+13. Delete branch from local and remote.
+
+-> switch to some other branch 
+git branch -d newBranchName (remove from local)
+
+git push origin --delete newBranchName

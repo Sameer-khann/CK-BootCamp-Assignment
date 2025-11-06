@@ -1,3 +1,4 @@
+(function(){
 
 var students = [];
 
@@ -54,7 +55,7 @@ function renderTable() {
     tr.appendChild(tdTotal);
     // Average
     var tdAvg = document.createElement('td');
-    tdAvg.textContent = calculateAverage(student.marks).toFixed(2);
+    tdAvg.textContent = calculateAverage(student.marks)?.toFixed?.(2);
     tr.appendChild(tdAvg);
     tbody.appendChild(tr);
   }
@@ -91,3 +92,12 @@ window.onload = function() {
   loadStudents();
   renderTable();
 };
+
+})()
+
+
+// if(!name) {
+
+// }
+
+// name = null || undefined || "" || 0
