@@ -37,9 +37,17 @@ git checkout -b newBranch2
 
 git branch newBranchName
 
-6. 
+6. How can you resolve a merge conflict in Git, provide an example.
 
-7. 
+git merge {Anoter banch's name}
+
+7. Show how divergence occurs in a branch.
+
+git fetch origin
+git rebase origin/{Bramch name}
+git add .
+git rebase --continue
+git push origin main --force-with-lease
 
 8. Difference between git init and git clone.
 
@@ -59,7 +67,11 @@ git fetch just bring the latest changes on remote branch but it doesn't merge it
 
 git pull is the combination of git fetch + git merge. It fetches the branch from remote and merge it too. And give us conflict (if any).
 
-11. 
+11. How to squash commits?
+
+git log --oneline
+git rebase -i HEAD~2
+git push origin main --force
 
 12. Show the difference between git reset and git revert.
 
