@@ -11,6 +11,8 @@ public class Task1{
             n = n / 10;
         }
 
+        string
+
         return sum;
     }
 
@@ -46,7 +48,7 @@ public class Task1{
     public static void main(String[] args) {
 //        Task1
         System.out.print("Enter the number : ");
-        Scanner sc1 = new Scanner(System.in);
+        Scanner sc1 = new Scanner(System.in);?
         int num = sc1.nextInt();
         int sum = sumNumbers(num);
         System.out.println("The sum of the digits of " + num + " is " + sum);

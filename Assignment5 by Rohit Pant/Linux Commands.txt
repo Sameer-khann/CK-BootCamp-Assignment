@@ -1,8 +1,10 @@
 Task 1 : Find and terminate the top memory-consuming process on your system.
 
-top
+top (Atlter)
 {press -> shift + M} (sort processes in decending order)
 sudo kill (ProcessID)
+
+force kill ?
 
 
 Task 2 : Create a user named devops and grant them sudo privileges.
@@ -48,10 +50,13 @@ Task 8 : Display the total number of unique shell types listed in /etc/passwd an
 
 awk -F: "{print $7}" /etc/passwd | sort | uniq | wc -l > task8.txt
 
+Without wc? list all?
+
 
 Task 9 : Explore vi/vim for
 Creating a text file. Understand cursor movement, switching input mode (append, insert etc),
 deleting command, pasting content, undo , redo ,search , save and quit operations in vim.
+modes ?
 
 vim task9.txt
 for cursor movement -> h, j, k, l, 0, $

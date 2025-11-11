@@ -34,6 +34,7 @@ class FullTimeEmployee extends Employee {
     }
 
     @Override
+    //annotation
     double calculateSalary() {
         return monthlySalary;
     }

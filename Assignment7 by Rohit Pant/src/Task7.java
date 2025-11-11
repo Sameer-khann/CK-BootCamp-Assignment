@@ -19,6 +19,7 @@ public class Task7 {
             validateEmail("samir.khan.com");
         } catch (InvalidEmailException e) {
             System.out.println("Caught Exception: " + e.getMessage());
+
         }
     }
 }
