@@ -48,9 +48,7 @@ find /etc -type f -name "*.conf" | sort > task7.txt
 
 Task 8 : Display the total number of unique shell types listed in /etc/passwd and save to shell_count.txt
 
-awk -F: "{print $7}" /etc/passwd | sort | uniq | wc -l > task8.txt
-
-Without wc? list all?
+awk -F: "{print $NF}" /etc/passwd | sort | uniq | wc -l > task8.txt
 
 
 Task 9 : Explore vi/vim for

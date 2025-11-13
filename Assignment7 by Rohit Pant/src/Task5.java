@@ -73,10 +73,10 @@ public class Task5 {
 //        DivisionwithException obj1 = new DivisionwithException(4, 6);
 //        obj1.errorcheck();
 
-//        Nestedtrycatch obj2 = new Nestedtrycatch();
+        Nestedtrycatch obj2 = new Nestedtrycatch();
 
-        ExceptionPropagationExample.m1();
-        System.out.println("ExceptionPropagationExample's program ended.");
+//        ExceptionPropagationExample.m1();
+//        System.out.println("ExceptionPropagationExample's program ended.");
 
     }
 }

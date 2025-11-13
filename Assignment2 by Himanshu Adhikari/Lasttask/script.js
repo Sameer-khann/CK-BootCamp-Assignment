@@ -43,13 +43,13 @@ function renderTable() {
     var tdName = document.createElement('td');
     tdName.textContent = student.name;
     tr.appendChild(tdName);
-    // Subject marks
+    //marks
     for (var j = 0; j < 5; j++) {
       var tdMark = document.createElement('td');
       tdMark.textContent = student.marks[j];
       tr.appendChild(tdMark);
     }
-    // Total
+    //Total
     var tdTotal = document.createElement('td');
     tdTotal.textContent = calculateTotal(student.marks);
     tr.appendChild(tdTotal);
